@@ -13,23 +13,23 @@ public class MadLib {
 
     
         System.out.println("Enter your name");
-        String name = concat(scanner.nextLine());
+        String name = scanner.nextLine();
         System.out.println("Enter an adjective");
-        String adjective = concat(scanner.nextLine());
+        String adjective = scanner.nextLine();
         System.out.println("Enter a noun");
-        String noun = concat(scanner.nextLine());
+        String noun = scanner.nextLine();
         System.out.println("Enter a verb");
-        String verb = concat(scanner.nextLine());
+        String verb = scanner.nextLine();
         System.out.println("Enter some silly brainrot");
-        String brainRot = concat(scanner.nextLine());
+        String brainRot = scanner.nextLine();
         System.out.println("Enter a plural verb");
-        String plularVerb = concat(scanner.nextLine());
+        String plularVerb = scanner.nextLine();
         System.out.println("Enter a plural noun");
-        String plularNoun = concat(scanner.nextLine());
+        String plularNoun = scanner.nextLine();
         System.out.println("Enter a random number");
-        String number = concat(scanner.nextLine());
+        String number = scanner.nextLine();
  
-        string completedStory = story1.replace("(adjective)", adjective).replace("(plural_noun)", plularNoun).replace("(name)", name).replace("(number)",number).replace("(plular_verb)", plularVerb);
+        String completedStory = story1.replace("(adjective)", adjective).replace("(plural_noun)", plularNoun).replace("(name)", name).replace("(number)",number).replace("(plural_verb)", plularVerb).replace("(brainrot)", brainRot).replace("(noun)", noun).replace("(verb)", verb);
 
         System.out.println("------------------- Your madlib Story ------------------");
         System.out.println(completedStory);
