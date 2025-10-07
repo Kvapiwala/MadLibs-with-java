@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class MadLib {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+
+
+        String story1 = "I was assigned a mission of the utmost importance. I had to sneak into a secret laboratory and find the (adjective) (plural_noun). The mission's success depended entirely on me, (name). I packed my bag, making sure to include (number) rope ladders, and slipped out into the night. I found the laboratory, but the security was intense. Several alarms (plural_verb) around the building, so I knew I had to be careful. A single (brainrot) (noun) (verb) at me from a nearby window. I held my breath and tiptoed past, knowing my cover would be blown if I made a sound.";
+
+
+
+    
+        System.out.println("Enter your name");
+        String name = concat(scanner.nextLine());
+        System.out.println("Enter an adjective");
+        String adjective = concat(scanner.nextLine());
+        System.out.println("Enter a noun");
+        String noun = concat(scanner.nextLine());
+        System.out.println("Enter a verb");
+        String verb = concat(scanner.nextLine());
+        System.out.println("Enter some silly brainrot");
+        String brainRot = concat(scanner.nextLine());
+        System.out.println("Enter a plural verb");
+        String plularVerb = concat(scanner.nextLine());
+        System.out.println("Enter a plural noun");
+        String plularNoun = concat(scanner.nextLine());
+        System.out.println("Enter a random number");
+        String number = concat(scanner.nextLine());
+ 
+        string completedStory = story1.replace("(adjective)", adjective).replace("(plural_noun)", plularNoun).replace("(name)", name).replace("(number)",number).replace("(plular_verb)", plularVerb);
+
+        System.out.println("------------------- Your madlib Story ------------------");
+        System.out.println(completedStory);
+     
+
+    }
+}
