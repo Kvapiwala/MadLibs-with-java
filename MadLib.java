@@ -5,33 +5,56 @@ public class MadLib {
 
         Scanner scanner = new Scanner(System.in);
 
+
+
+        String story1 = "I was assigned a mission of the utmost importance. I had to sneak into a secret laboratory and find the (adjective) (plural_noun). The mission's success depended entirely on me, (name). I packed my bag, making sure to include (number) rope ladders, and slipped out into the night. I found the laboratory, but the security was intense. Several alarms (plural_verb) around the building, so I knew I had to be careful. A single (brainrot) (noun) (verb) at me from a nearby window. I held my breath and tiptoed past, knowing my cover would be blown if I made a sound.";
+        String story2 = "I was assigned a mission of the utmost importance. I had to sneak into a secret laboratory and find the (adjective) (plural_noun). The mission's success depended entirely on me, (name). I packed my bag, making sure to include (number) rope ladders, and slipped out into the night. I found the laboratory, but the security was intense. Several alarms (plural_verb) around the building, so I knew I had to be careful. A single (brainrot) (noun) (verb) at me from a nearby window. I held my breath and tiptoed past, knowing my cover would be blown if I made a sound.";
+        String story3 = "I was assigned a mission of the utmost importance. I had to sneak into a secret laboratory and find the (adjective) (plural_noun). The mission's success depended entirely on me, (name). I packed my bag, making sure to include (number) rope ladders, and slipped out into the night. I found the laboratory, but the security was intense. Several alarms (plural_verb) around the building, so I knew I had to be careful. A single (brainrot) (noun) (verb) at me from a nearby window. I held my breath and tiptoed past, knowing my cover would be blown if I made a sound.";
+
+
+
     
         System.out.println("Enter your name");
-        String name = "(Name) ".concat(scanner.nextLine());
+        String name = scanner.nextLine();
         System.out.println("Enter an adjective");
-        String adjective = "(Adjective) ".concat(scanner.nextLine());
+        String adjective = scanner.nextLine();
         System.out.println("Enter a noun");
-        String noun = "(Noun) ".concat(scanner.nextLine());
+        String noun = scanner.nextLine();
         System.out.println("Enter a verb");
-        String verb = "(Verb) ".concat(scanner.nextLine());
+        String verb = scanner.nextLine();
         System.out.println("Enter some silly brainrot");
-        String brainRot = "(Brainrot) ".concat(scanner.nextLine());
+        String brainRot = scanner.nextLine();
         System.out.println("Enter a plural verb");
-        String plularVerb = "(Plular Verb) ".concat(scanner.nextLine());
+        String plularVerb = scanner.nextLine();
         System.out.println("Enter a plural noun");
-        String plularNoun = "(Plular Noun) ".concat(scanner.nextLine());
+        String plularNoun = scanner.nextLine();
         System.out.println("Enter a random number");
-        String number = "(Number) ".concat(scanner.nextLine());
+        String number = scanner.nextLine();
  
-        // scanner.nextLine();
 
-        String allInput = name + adjective + noun + verb + brainRot + plularVerb + plularNoun;
 
-        System.out.println("\n -------------- Your MadLib Story -------------------- \n");
-        System.out.print("I was assigned a mission of the utmost importance. I had to sneak into a secret laboratory and find the " + adjective + " " + plularNoun + ".");
-        System.out.println("The mission's success depended entirely on me, " + name + ".");
-        System.out.println("I packed my bag, making sure to include" + number + " rope ladders, and slipped out into the night.");
-        System.out.println("I found the laboratory, but the security was intense. Several alarms " + plularVerb + " around the building, so I knew I had to be careful.");
-        System.out.println(" A single " + brainRot + " " + noun + " " + verb + " at me from a nearby window. I held my breath and tiptoed past, knowing my cover would be blown if I made a sound.");
+        story1 = wordReplacement(story1, "(adjective)", adjective);
+        story1 = wordReplacement(story1, "(verb)", verb);
+        story1 = wordReplacement(story1, "(noun)", noun);
+        story1 = wordReplacement(story1, "(brainrot)", brainRot);
+        story1 = wordReplacement(story1, "(plural_noun)", plularNoun);
+        story1 = wordReplacement(story1, "(plural_verb)", plularVerb);
+        story1 = wordReplacement(story1, "(number)", number);
+        story1 = wordReplacement(story1, "(name)", name);
+        
+        System.out.println("------------------- Your 1st madlib Story ------------------");
+        System.out.println(story1);
+     
+
     }
+
+    private static String wordReplacement(String finalStory, String preReplace, String postReplace) {
+        int start = finalStory.indexOf(preReplace);
+        int end = start + preReplace.length();
+        finalStory = finalStory.substring(0, start) + postReplace + finalStory.substring(end);
+        start = finalStory.indexOf(preReplace);
+
+        return finalStory;
+    }
+    
 }
