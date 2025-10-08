@@ -29,11 +29,30 @@ public class MadLib {
         System.out.println("Enter a random number");
         String number = scanner.nextLine();
  
-        String completedStory = story1.replace("(adjective)", adjective).replace("(plural_noun)", plularNoun).replace("(name)", name).replace("(number)",number).replace("(plural_verb)", plularVerb).replace("(brainrot)", brainRot).replace("(noun)", noun).replace("(verb)", verb);
+
+
+        story1 = wordReplacement(story1, "(adjective)", adjective);
+        story1 = wordReplacement(story1, "(verb)", verb);
+        story1 = wordReplacement(story1, "(noun)", noun);
+        story1 = wordReplacement(story1, "(brainrot)", brainRot);
+        story1 = wordReplacement(story1, "(plural_noun)", plularNoun);
+        story1 = wordReplacement(story1, "(plural_verb)", plularVerb);
+        story1 = wordReplacement(story1, "(number)", number);
+        story1 = wordReplacement(story1, "(name)", name);
 
         System.out.println("------------------- Your madlib Story ------------------");
-        System.out.println(completedStory);
+        System.out.println(story1);
      
 
     }
+
+    private static String wordReplacement(String story, String preReplace, String postReplace) {
+        int start = story.indexOf(preReplace);
+        int end = start + preReplace.length();
+        story = story.substring(0, start) + postReplace + story.substring(end);
+        start = story.indexOf(preReplace);
+
+        return story;
+    }
+    
 }
