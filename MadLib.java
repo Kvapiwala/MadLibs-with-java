@@ -6,13 +6,13 @@ public class MadLib {
         Scanner scanner = new Scanner(System.in);
 
 
-
+        /// My 3 different stories(uncompleted with blanks)
         String story1 = "I was assigned a mission of the utmost importance. I had to sneak into a secret laboratory and find the (adjective) (plural_noun). The mission's success depended entirely on me, (name). I packed my bag, making sure to include (number) rope ladders, and slipped out into the night. I found the laboratory, but the security was intense. Several alarms (plural_verb) around the building, so I knew I had to be careful. A single (brainrot) (noun) (verb) at me from a nearby window. I held my breath and tiptoed past, knowing my cover would be blown if I made a sound.";
         String story2 = "I was assigned a mission of the utmost importance. I had to sneak into a secret laboratory and find the (adjective) (plural_noun). The mission's success depended entirely on me, (name). I packed my bag, making sure to include (number) rope ladders, and slipped out into the night. I found the laboratory, but the security was intense. Several alarms (plural_verb) around the building, so I knew I had to be careful. A single (brainrot) (noun) (verb) at me from a nearby window. I held my breath and tiptoed past, knowing my cover would be blown if I made a sound.";
         String story3 = "I was assigned a mission of the utmost importance. I had to sneak into a secret laboratory and find the (adjective) (plural_noun). The mission's success depended entirely on me, (name). I packed my bag, making sure to include (number) rope ladders, and slipped out into the night. I found the laboratory, but the security was intense. Several alarms (plural_verb) around the building, so I knew I had to be careful. A single (brainrot) (noun) (verb) at me from a nearby window. I held my breath and tiptoed past, knowing my cover would be blown if I made a sound.";
 
 
-
+        //string collection section
     
         System.out.println("Enter your name");
         String name = scanner.nextLine();
@@ -31,7 +31,7 @@ public class MadLib {
         System.out.println("Enter a random number");
         String number = scanner.nextLine();
  
-
+        /// This is were all the functions are ran and the words are substituted
 
         story1 = wordReplacement(story1, "(adjective)", adjective);
         story1 = wordReplacement(story1, "(verb)", verb);
@@ -41,13 +41,36 @@ public class MadLib {
         story1 = wordReplacement(story1, "(plural_verb)", plularVerb);
         story1 = wordReplacement(story1, "(number)", number);
         story1 = wordReplacement(story1, "(name)", name);
+
+        story2 = wordReplacement(story2, "(adjective)", adjective);
+        story2 = wordReplacement(story2, "(verb)", verb);
+        story2 = wordReplacement(story2, "(noun)", noun);
+        story2 = wordReplacement(story2, "(brainrot)", brainRot);
+        story2 = wordReplacement(story2, "(plural_noun)", plularNoun);
+        story2 = wordReplacement(story2, "(plural_verb)", plularVerb);
+        story2 = wordReplacement(story2, "(number)", number);
+        story2 = wordReplacement(story2, "(name)", name);
+                
+        story3 = wordReplacement(story3, "(adjective)", adjective);
+        story3 = wordReplacement(story3, "(verb)", verb);
+        story3 = wordReplacement(story3, "(noun)", noun);
+        story3 = wordReplacement(story3, "(brainrot)", brainRot);
+        story3 = wordReplacement(story3, "(plural_noun)", plularNoun);
+        story3 = wordReplacement(story3, "(plural_verb)", plularVerb);
+        story3 = wordReplacement(story3, "(number)", number);
+        story3 = wordReplacement(story3, "(name)", name);
         
+        /// Print completed stories
         System.out.println("------------------- Your 1st madlib Story ------------------");
         System.out.println(story1);
+        System.out.println("------------------- Your 2nd madlib Story ------------------");
+        System.out.println(story2);
+        System.out.println("------------------- Your 3rd madlib Story ------------------");
+        System.out.println(story3);
      
 
     }
-
+        /// Function to perform word substitutions
     private static String wordReplacement(String finalStory, String preReplace, String postReplace) {
         int start = finalStory.indexOf(preReplace);
         int end = start + preReplace.length();
