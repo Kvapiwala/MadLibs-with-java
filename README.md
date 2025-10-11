@@ -9,6 +9,7 @@
 - Scanner takes user input for 8 variables for types of words to be filled into the template
 - A bunch of function call statements to fill in input into the blank spaces on all 3 MadLib templates
 - Lastly the wordReplacement() Function it self that takes in the the story templates as a paramater, the blank space, and the user input all as parameters. The function utlizes string indexing and subsring methods to find blanks and replace them with inputs.
+- Print statements: 3 Madlibs are printed telling a funny story using the users words
 
 ## wordReplacement() Function
 - The following function performs the word replacements in a given story by finding the blanks and replacing the word with the user inputted word, then returns the completed template after the word replacements.
