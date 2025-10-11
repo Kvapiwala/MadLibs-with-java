@@ -29,3 +29,4 @@
     - Every word has its own runstatement filled into the template variable
  
   ## Functionality Screenshot
+<img width="2041" height="425" alt="image" src="https://github.com/user-attachments/assets/494c25f9-5a5c-419b-b7d0-7db6109788ec" />
