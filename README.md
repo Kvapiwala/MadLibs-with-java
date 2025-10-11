@@ -12,6 +12,8 @@
 
 ## wordReplacement() Function
 - The following function performs the word replacements in a given story by finding the blanks and replacing the word with the user inputted word, then returns the completed template after the word replacements.
+- <img width="1515" height="208" alt="image" src="https://github.com/user-attachments/assets/e6f9d8ff-81c7-4e6b-b113-31ea9035075c" />
+
    ### Line by Line breakdown
     - Line 73: Takes parameters: finalStory(The story template), preReplace(Blank space word), postReplace(word that replaces blank)
     - line 74: sets an integer variable named **start** that finds the numerican index of the word to be replaced, the blank space EX: (verb)
